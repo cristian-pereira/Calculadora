@@ -1,0 +1,80 @@
+:root{
+    --rojo-oscuro: #3f0d06;
+    --rojo: #7d1a0c;
+
+    --negro: #000;
+    --blanco: #fff;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,::after,::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lemonchiffon;
+    color: var(--blanco);
+}
+.calculadora{
+    padding: 2rem;
+    background-color: var(--rojo-oscuro);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+.calculadora__arriba{
+    background-color: var(--rojo);
+    text-align: end;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.calculadora__arriba p{
+    padding: 1rem;
+}
+.calculadora__arriba p:first-child{
+    font-size: 2rem;
+    font-weight: 700;
+    min-height: 4.5rem;
+}
+.calculadora__arriba p:last-child{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 4.5rem;
+    align-items: center;
+    font-weight: 700;
+    min-height: 7.5rem;
+}
+.calculadora__abajo{
+    border-radius: 1rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.boton, .operadores, .igual {
+    padding: 2rem 3rem;
+    border: .1rem solid #ccc;
+    font-size: 2.5rem;
+    text-align: center;
+    transition: all ease .3s;
+}
+.boton:hover, .operadores:hover, .igual:hover {
+    cursor: pointer;
+    background-color: var(--rojo);
+}
+.operadores{
+    background-color: var(--rojo);
+}
+.boton.doble{
+    grid-column: 1 / span 2;
+}
+
